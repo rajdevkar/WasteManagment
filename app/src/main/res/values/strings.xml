@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WasteManagment</string>
+
+
+    <string-array name="userType">
+        <item>User</item>
+        <item>agent</item>
+    </string-array>
+</resources>

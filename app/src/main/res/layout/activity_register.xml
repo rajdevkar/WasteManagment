@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:paddingStart="15dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="18dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:textAlignment="center"
+            android:text="Register"
+            android:textStyle="bold"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:background="@drawable/et_bg"
+            android:gravity="center"
+            android:hint="Username"
+            android:layout_below="@+id/title"
+            android:inputType="textEmailAddress"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:importantForAutofill="no"
+            android:padding="18dp"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:background="@drawable/et_bg"
+            android:gravity="center"
+            android:hint="Email"
+            android:layout_below="@+id/et_username"
+            android:inputType="textEmailAddress"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:importantForAutofill="no"
+            android:padding="18dp"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/et_email"
+            android:background="@drawable/et_bg"
+            android:gravity="center"
+            android:hint="Password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/et_password"
+            android:background="@drawable/et_bg"
+            android:gravity="center"
+            android:hint="Phone"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <Spinner
+            android:id="@+id/userType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:layout_margin="10dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:layout_below="@+id/et_phone" />
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:layout_below="@id/userType"
+            android:background="@drawable/login_btn"
+            android:elevation="2dp"
+            android:enabled="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:stateListAnimator="@null"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/register_btn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Existing User"
+                android:textColor="#212121"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/gotologin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to Login"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
